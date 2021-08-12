@@ -50,4 +50,19 @@ public class UtilityClass {
                     + pNum + " is not a perfect number");
         }
     }
+
+    /**
+     * Prime number Program
+     */
+    public void prime(int num) {
+
+        for (int i = 2; i <= num / 2; i++) {
+
+            if (num % i == 0) {
+                System.out.println(num + " is not prime number");
+                System.exit(0);    //to terminate program
+            }
+        }
+        System.out.println(num + " is prime number");
+    }
 }
