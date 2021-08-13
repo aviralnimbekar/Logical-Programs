@@ -65,4 +65,25 @@ public class UtilityClass {
         }
         System.out.println(num + " is prime number");
     }
+
+    /**
+     * Reverses number
+     *
+     * @param num userInput
+     * @return rev (reversed number)
+     */
+    public int revNum(int num) {
+
+        int rev = 0;
+        int remainder;
+
+        while (num > 0) {
+
+            remainder = num % 10;       //only last digit of the number
+            num = num / 10;             //new number without last digit
+            rev = rev * 10 + remainder; // reversed number
+        }
+        return rev;
+    }
+
 }
